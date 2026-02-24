@@ -1,2 +1,3 @@
 # Proyectos-Portafolio
-Este repositorio copntinee los proyectos que se incluirán en mi portafolio
+
+Este repositorio continee los proyectos que se incluirán en mi portafolio
