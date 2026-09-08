@@ -1,111 +1,67 @@
-# Proyectos-Portafolio
+# Portafolio de ciencia de datos — Luis Javier Rubio Hernández
 
-**Matemáticas, análisis de datos y aprendizaje automático: comprender, aplicar y comunicar.**
+Matemático · Magíster en Matemáticas · Estudiante de Maestría en Ciencia de Datos
 
-Soy **Luis Javier Rubio Hernández**, matemático, magíster en Matemáticas y docente universitario. Actualmente curso la **Maestría en Ciencia de Datos en la Pontificia Universidad Javeriana Cali**. Este repositorio reúne proyectos, análisis y notas de estudio con los que documento mi formación y construyo mi portafolio en ciencia de datos.
+Cinco análisis reproducibles en Python. Cada cuaderno se abre en Google Colab y se ejecuta de
+principio a fin sin descargar nada: los datos se leen desde este mismo repositorio o desde la
+fuente pública original.
 
-Aquí conecto mi formación matemática con preguntas sobre salud pública, educación, comportamiento de clientes y realidad social. Me interesa comprender qué hace un método, bajo qué supuestos funciona y hasta dónde permite interpretar los resultados.
+---
 
-## Filosofía del repositorio
+## Cuadernos
 
-**Aprender haciendo y explicar lo aprendido con fundamento.** Cada proyecto es una oportunidad para formular preguntas, examinar los datos, justificar decisiones y comunicar conclusiones que puedan contrastarse con el trabajo realizado.
+| | Cuaderno | Qué demuestra | Datos |
+|---|---|---|---|
+| 01 | [COVID-19: cuando los datos no podían con la realidad](01_covid19_johns_hopkins.ipynb) | Reestructuración de series acumuladas, auditoría de calidad, concentración con Lorenz y Gini | Johns Hopkins (URL pública) |
+| 02 | [¿Qué significa que una máquina aprenda?](02_fundamentos_aprendizaje_automatico.ipynb) | Verificación numérica de fundamentos: riesgo empírico, convergencia del gradiente, sesgo–varianza | Sintéticos con semilla fija |
+| 03 | [Segmentación de clientes en marketing directo](03_segmentacion_clientes_marketing.ipynb) | Depuración validada, prueba de Little, imputación múltiple por PMM, contrastes no paramétricos con tamaños del efecto | `datos/campana_marketing_directo.csv` |
+| 04 | [4.627 masacres del conflicto armado colombiano](04_masacres_conflicto_armado_colombia.ipynb) | EDA sobre datos abiertos, Kruskal-Wallis, concentración territorial, coocurrencia entre hechos | `datos/masacres_omc_colombia.csv` |
+| 05 | [¿Por qué mi canal de YouTube se resiste a morir?](05_canal_youtube_epsilon_delta.ipynb) | Ley de Pareto, CTR ponderado, bootstrap, retención estimada | `datos/youtube_epsilon_delta_videos.csv` |
+| 06 | [Alcohol y rendimiento académico](06_alcohol_rendimiento_estudiantil.ipynb) | Faltantes estructurales, contrastes no paramétricos, modelo con control, análisis de potencia | `datos/alcohol_rendimiento_estudiantil.csv` |
 
-El repositorio se guía por estos principios:
+## Estructura
 
-- **Rigor matemático y estadístico.** Explicitar definiciones, supuestos y limitaciones; distinguir una demostración de una comprobación numérica y una asociación de una relación causal.
-- **Lectura crítica de los datos.** Revisar su procedencia, estructura y calidad antes de interpretar cifras. Un registro describe lo documentado por una fuente, con sus alcances y omisiones.
-- **Trazabilidad y reproducibilidad.** Documentar cómo se pasa de los datos a los resultados, incluyendo transformaciones, dependencias y decisiones metodológicas.
-- **Comunicación clara.** Acompañar el código y las fórmulas con explicaciones comprensibles. Las visualizaciones deben ayudar a responder preguntas y conservar el contexto de los resultados.
-- **Aprendizaje continuo.** Revisar los análisis a medida que avanzo en mi formación, corregir errores y hacer explícitos los aspectos pendientes.
-
-En temas sociales, el análisis exige además reconocer a las personas y comunidades detrás de los registros y tratar las conclusiones con la responsabilidad que ese contexto requiere.
-
-## Del análisis a LinkedIn
-
-Los **notebooks** documentan el desarrollo técnico: preparación de datos, exploración, cálculos, simulaciones y visualizaciones. Los **PDF** son materiales que utilizo como base o acompañamiento de mis publicaciones en **LinkedIn**, para compartir hallazgos, explicar conceptos y reflexionar sobre lo aprendido durante la maestría.
-
-Ambos formatos se complementan: el PDF facilita la lectura y la divulgación; el notebook permite examinar el procedimiento que respalda el contenido. Algunos documentos son notas conceptuales y otros presentan análisis aplicados. Cuando existen versiones en distintos lenguajes, conviene consultar sus decisiones de implementación antes de comparar resultados.
-
-## Contenido
-
-| Tema | Pregunta o enfoque | Material disponible |
-| --- | --- | --- |
-| COVID-19 — Johns Hopkins | Cómo interpretar series acumuladas, construir agregaciones temporales y reconocer las limitaciones de los datos reportados. | Notebook `01` y PDF. |
-| Fundamentos del aprendizaje automático | Qué significa aprender: riesgo, función de costo, optimización y evaluación, con ejemplos y simulaciones. | Notebook `02` y PDF. |
-| Segmentación de clientes en marketing directo | Preparación de datos, tratamiento de faltantes y caracterización de perfiles según la respuesta a una campaña. | Notebook `03` en Python y PDF del análisis desarrollado en R. |
-| Masacres del conflicto armado colombiano | Exploración temporal, territorial y por presuntos responsables, considerando los límites del registro. | Notebook `04` y PDF. |
-| Canal de YouTube de matemáticas | Análisis del desempeño del canal y reflexión sobre el alcance de los contenidos educativos. | PDF; notebook por incorporar. |
-
-## Estructura propuesta
-
-Esta es la organización prevista para el repositorio. Las rutas siguientes sirven como guía de reorganización; las carpetas y los archivos pendientes se incorporarán progresivamente.
-
-| Ruta desde la raíz | Contenido y función |
-| --- | --- |
-| `README.md` | Presentación, filosofía y guía del portafolio. |
-| `LICENSE` | Licencia del repositorio. |
-| `.gitignore` | Exclusión de entornos locales, archivos temporales y datos que no deban publicarse. |
-| `requirements.txt` | Dependencias de Python con las versiones utilizadas, una vez verificadas. |
-| `notebooks/` | Cuadernos de análisis y experimentación. |
-| `data/README.md` | Fuentes, fechas de descarga, diccionario de variables e instrucciones de acceso a los datos. |
-| `data/raw/` | Archivos originales, conservados sin modificaciones, cuando se permita su redistribución. |
-| `data/processed/` | Datos derivados de la preparación y limpieza. |
-| `docs/linkedin/` | PDF utilizados para las publicaciones en LinkedIn. |
-| `docs/linkedin/README.md` | Índice que relaciona cada PDF con su notebook y, cuando esté disponible, su publicación. |
-| `assets/figures/` | Gráficos exportados para documentos y publicaciones. |
-| `assets/images/` | Imágenes, diagramas y otros recursos de apoyo. |
-| `projects/` | Proyectos autónomos con varios archivos o una estructura propia. Cada uno tendrá su README. |
-| `src/` | Funciones reutilizables cuando varios notebooks compartan código. Se añadirá cuando sea necesario. |
-
-### Nombres de los notebooks
-
-Conservar los nombres actuales permite mantener una secuencia clara:
-
-```text
-notebooks/01_covid19_johns_hopkins.ipynb
-notebooks/02_fundamentos_aprendizaje_automatico.ipynb
-notebooks/03_segmentacion_clientes_marketing.ipynb
-notebooks/04_masacres_conflicto_armado_colombia.ipynb
+```
+.
+├── README.md
+├── 01_covid19_johns_hopkins.ipynb
+├── 02_fundamentos_aprendizaje_automatico.ipynb
+├── 03_segmentacion_clientes_marketing.ipynb
+├── 04_masacres_conflicto_armado_colombia.ipynb
+├── 05_canal_youtube_epsilon_delta.ipynb
+├── 06_alcohol_rendimiento_estudiantil.ipynb
+└── datos/
+    ├── alcohol_rendimiento_estudiantil.csv
+    ├── campana_marketing_directo.csv
+    ├── masacres_omc_colombia.csv
+    └── youtube_epsilon_delta_videos.csv
 ```
 
-Para el análisis del canal, el nombre previsto es `notebooks/05_analisis_canal_youtube.ipynb`, cuando se incorpore el cuaderno.
+## Competencias demostradas
 
-### Organización de los PDF
+**Preparación y validación.** Reestructuración de formato ancho a largo; diferenciación de series
+acumuladas; detección de atípicos por IQR; identificación de inconsistencias de dominio;
+validación de la depuración con Kolmogorov-Smirnov y norma de Frobenius entre matrices de
+correlación.
 
-Se propone renombrarlos con el mismo identificador del notebook asociado. El título editorial puede conservarse dentro del documento.
+**Datos faltantes.** Prueba MCAR de Little implementada con estimación EM; imputación múltiple por
+*predictive mean matching* con extracción bayesiana de coeficientes; comparación contra CART y
+Ridge por estabilidad entre imputaciones y preservación de correlaciones.
 
-| Documento actual | Ruta propuesta |
-| --- | --- |
-| Cuando los datos no podían.pdf | `docs/linkedin/01_covid19_johns_hopkins.pdf` |
-| ¿Qué significa, exactamente,.pdf | `docs/linkedin/02_fundamentos_aprendizaje_automatico.pdf` |
-| Segmentación de clientes.pdf | `docs/linkedin/03_segmentacion_clientes_marketing.pdf` |
-| 4,627 masacres lo que los datos revelan.pdf | `docs/linkedin/04_masacres_conflicto_armado_colombia.pdf` |
-| ¿Por qué mi canal de YouTube.pdf | `docs/linkedin/05_analisis_canal_youtube.pdf` |
+**Inferencia.** Mann-Whitney con correlación rank-biserial; Kruskal-Wallis con épsilon cuadrado;
+chi-cuadrado con V de Cramér; Shapiro-Wilk; Spearman; intervalos de confianza por bootstrap;
+regresión múltiple con diagnóstico de residuos; análisis de potencia y efecto mínimo detectable
+por la transformación z de Fisher. Todos los contrastes se reportan con su tamaño del efecto, no
+solo con el valor p.
 
-Los proyectos independientes, como el de consumo de alcohol y desempeño estudiantil, pueden ubicarse en `projects/alcohol_student_performance/`, conservando su organización interna. El diagrama `ERD Practice.png` puede trasladarse a `assets/images/erd_practice.png`.
+**Comunicación.** Visualización siguiendo las prácticas de Cole Nussbaumer Knaflic: gris para el
+contexto, un solo color de acento para la historia, sin elementos decorativos.
 
-## Cómo consultar y reproducir el trabajo
+## Reproducibilidad
 
-Para conocer un tema, comienza por su PDF. Para revisar el método y los cálculos, consulta el notebook correspondiente.
+Los cinco cuadernos están ejecutados: las salidas y figuras visibles en GitHub son las que produce
+el código. Toda simulación usa semilla fija. Las celdas de carga intentan primero la URL del
+repositorio y recurren a una copia local como respaldo.
 
-Para ejecutar un cuaderno:
-
-1. Revisa su introducción, las fuentes y las dependencias importadas.
-2. Obtén los datos siguiendo la documentación y respeta sus condiciones de uso.
-3. Ajusta las rutas a la estructura adoptada. Algunos cuadernos todavía contienen referencias `USUARIO/REPO`, rutas `datos/` o cargas desde archivos situados junto al notebook.
-4. Abre el cuaderno en Jupyter o Google Colab, selecciona el entorno adecuado y ejecuta las celdas en orden desde un kernel limpio.
-
-La reorganización deberá acompañarse de la actualización de las rutas y los enlaces de Colab. La reproducción de resultados depende también de la versión de los datos, las bibliotecas y, cuando corresponda, las semillas aleatorias.
-
-## Herramientas
-
-Los cuadernos compartidos utilizan **Python**, con bibliotecas como **pandas, NumPy, Matplotlib, SciPy y scikit-learn**. Parte del trabajo de análisis también se desarrolla en **R**, con herramientas como **bookdown** y **mice**. Cada proyecto debe indicar cuáles necesita realmente.
-
-## Fuentes y uso del material
-
-Las fuentes de datos y las referencias metodológicas se documentan en los materiales de cada proyecto. Para reutilizar el contenido, consulta `LICENSE`; los datos de terceros conservan sus propias condiciones de uso.
-
-Este portafolio está en construcción y refleja mi proceso de aprendizaje. Las observaciones técnicas y las correcciones fundamentadas son bienvenidas a través de los issues del repositorio.
-
-**Luis Javier Rubio Hernández**  
-Matemático · Magíster en Matemáticas · Docente universitario · Estudiante de Maestría en Ciencia de Datos
+Dependencias: `numpy`, `pandas`, `scipy`, `matplotlib`, `seaborn`, `scikit-learn`, `statsmodels`. Todas vienen preinstaladas
+en Google Colab.
